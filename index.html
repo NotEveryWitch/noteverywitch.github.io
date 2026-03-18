@@ -72,7 +72,7 @@
         .links-group {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
 
         .link-card {
@@ -85,7 +85,6 @@
             transition: all 0.2s ease;
             border: 1px solid #333;
             display: flex;
-            justify-content: space-between;
             align-items: center;
         }
 
@@ -95,7 +94,16 @@
             background-color: #252525;
         }
 
-        .steam-btn { border-color: #66c0f4; }
+        .btn-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            object-fit: contain;
+        }
+
+        .steam-btn {
+            border-color: #66c0f4;
+        }
 
         .nsfw-badge {
             background: #cf6679;
@@ -104,6 +112,37 @@
             border-radius: 4px;
             text-transform: uppercase;
             margin-left: 5px;
+        }
+
+        .social-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin: 40px 0 15px 0;
+            opacity: 0.8;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+        }
+
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+
+        .social-icon {
+            width: 28px;
+            height: 28px;
+            transition: 0.2s;
+            opacity: 0.7;
+        }
+
+        .social-icon:hover {
+            opacity: 1;
+            transform: scale(1.1);
         }
 
         .disclaimer {
@@ -125,38 +164,45 @@
     </p>
 
     <!-- STEAM -->
-<!--
-    <div class="section-title">Coming Soon</div>
-    <div class="links-group">
-        <a href="STEAM_URL" class="link-card steam-btn">
-            Wishlist on Steam <span>🚀</span>
-        </a>
-    </div>
--->
+    <!--
+        <div class="section-title">Coming Soon</div>
+        <div class="links-group">
+            <a href="STEAM_URL" class="link-card steam-btn">
+                Wishlist on Steam <span>🚀</span>
+            </a>
+        </div>
+    -->
 
     <!-- EARLY ACCESS -->
     <div class="section-title">Support & Early Access</div>
     <div class="links-group">
-        <a href="https://patreon.com/NotEveryWitch?utm_medium=site&utm_source=github&utm_campaign=page" class="link-card">
+        <a href="https://patreon.com/NotEveryWitch?utm_medium=site&utm_source=github&utm_campaign=page"
+           class="link-card">
+            <img src="patreon.svg" class="btn-icon" alt="">
             Patreon
         </a>
-        <a href="https://subscribestar.adult/noteverywitch?utm_medium=site&utm_source=github&utm_campaign=page" class="link-card">
+        <a href="https://subscribestar.adult/noteverywitch?utm_medium=site&utm_source=github&utm_campaign=page"
+           class="link-card">
+            <img src="subscribestar.png" class="btn-icon" alt="">
             SubscribeStar
         </a>
     </div>
 
     <!-- PUBLIC VERSIONS -->
-<!--
-    <div class="section-title">Public Versions</div>
-    <div class="links-group">
-        <a href="ITCHIO_URL" class="link-card">Itch.io</a>
-    </div>
--->
+    <!--
+        <div class="section-title">Public Versions</div>
+        <div class="links-group">
+            <a href="ITCHIO_URL" class="link-card">Itch.io</a>
+        </div>
+    -->
 
-    <!-- SOCIAL -->
-    <div class="section-title">Community</div>
-    <div class="links-group">
-        <a href="https://discord.gg/yExfFgVVbP" class="link-card">Join Discord</a>
+    <div class="social-title">Follow me:</div>
+    <div class="social-row">
+        <a href="https://discord.gg/yExfFgVVbP"><img src="discord.svg" class="social-icon" alt="Discord"></a>
+        <a href="https://bsky.app/profile/noteverywitch.bsky.social"><img src="bluesky.svg" class="social-icon" alt="Bluesky"></a>
+        <a href="https://www.instagram.com/neverywitch/"><img src="instagram.svg" class="social-icon" alt="Instagram"></a>
+        <a href="https://x.com/noteverywitch    "><img src="x.svg" class="social-icon" alt="Twitter"></a>
+        <a href="https://www.reddit.com/user/Decent-Election-3743"><img src="reddit.svg" class="social-icon" alt="Reddit"></a>
     </div>
 
     <p class="disclaimer">
