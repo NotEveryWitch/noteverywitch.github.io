@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Every Witch</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --accent-color: #bb86fc;
+            --steam-color: #1b2838;
+            --patreon-color: #ff424d;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            background-image: url('avatar.png');
+            background-size: cover;
+            background-position: center;
+            display: inline-block;
+        }
+
+        h1 {
+            display: flex;
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            margin: 20px 0 10px 5px;
+        }
+
+        .links-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-card {
+            background-color: var(--card-bg);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 16px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            border: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .link-card:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-color);
+            background-color: #252525;
+        }
+
+        .steam-btn { border-color: #66c0f4; }
+
+        .nsfw-badge {
+            background: #cf6679;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-left: 5px;
+        }
+
+        .disclaimer {
+            margin-top: 40px;
+            font-size: 0.75rem;
+            color: #555;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="avatar"></div>
+    <h1>Not Every Witch <span class="nsfw-badge">18+</span></h1>
+    <p class="description">
+        Independent developer of erotic games.<br>
+        Follow the journey and support the project below.
+    </p>
+
+    <!-- STEAM -->
+<!--
+    <div class="section-title">Coming Soon</div>
+    <div class="links-group">
+        <a href="STEAM_URL" class="link-card steam-btn">
+            Wishlist on Steam <span>🚀</span>
+        </a>
+    </div>
+-->
+
+    <!-- EARLY ACCESS -->
+    <div class="section-title">Support & Early Access</div>
+    <div class="links-group">
+        <a href="https://patreon.com/NotEveryWitch?utm_medium=site&utm_source=github&utm_campaign=page" class="link-card">
+            Patreon
+        </a>
+        <a href="https://subscribestar.adult/noteverywitch?utm_medium=site&utm_source=github&utm_campaign=page" class="link-card">
+            SubscribeStar
+        </a>
+    </div>
+
+    <!-- PUBLIC VERSIONS -->
+<!--
+    <div class="section-title">Public Versions</div>
+    <div class="links-group">
+        <a href="ITCHIO_URL" class="link-card">Itch.io</a>
+    </div>
+-->
+
+    <!-- SOCIAL -->
+    <div class="section-title">Community</div>
+    <div class="links-group">
+        <a href="https://discord.gg/yExfFgVVbP" class="link-card">Join Discord</a>
+    </div>
+
+    <p class="disclaimer">
+        By clicking any link, you confirm that you are 18+ years of age.<br>
+        All characters depicted are 18 or older.
+    </p>
+</div>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-03QK18XC0D"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-03QK18XC0D');
+</script>
+
+</body>
+</html>
