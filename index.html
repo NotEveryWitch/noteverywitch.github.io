@@ -220,5 +220,26 @@
     gtag('config', 'G-03QK18XC0D');
 </script>
 
+<script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const url = new URL(window.location.href);
+        const params = url.searchParams;
+        let hasUtm = false;
+
+        Array.from(params.keys()).forEach(key => {
+          if (key.startsWith('utm_')) {
+            params.delete(key);
+            hasUtm = true;
+          }
+        });
+
+        if (hasUtm) {
+          const cleanUrl = url.pathname + (params.toString() ? '?' + params.toString() : '') + url.hash;
+          window.history.replaceState({}, document.title, cleanUrl);
+        }
+      }, 500);
+    });
+</script>
 </body>
 </html>
