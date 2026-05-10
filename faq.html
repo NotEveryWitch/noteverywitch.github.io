@@ -143,8 +143,7 @@
             <summary>How do I increase the relationship level?</summary>
             <div class="faq-answer">
                 Each of these works once:<br>
-                Try complimenting the girl.<br>
-                Try giving her gifts.<br><br>
+                Try complimenting the girl.<br><br>
                 There are other methods as well; I'll add them to the FAQ later because I'm lazy...
             </div>
         </details>
@@ -159,7 +158,7 @@
             <div class="faq-answer">
                 There are currently three ways to be admitted to the medbay:<br>
                 1) Eat Molly's food from the fridge.<br>
-                2) Rush up the ladder.<br>
+                2) Climb up fast on the ladder.<br>
                 3) Increase the temperature using the machine in the cargo bay.
             </div>
         </details>
@@ -175,6 +174,12 @@
                 Wait until Jenny sits down for lunch in the kitchen and join her. After that, you will be able to hide the salt and ask Jenny to look for it during her next lunch.
             </div>
         </details>
+        <details class="faq-item">
+            <summary>How do I open the vent?</summary>
+            <div class="faq-answer">
+                Look for the key in the fridge at night.
+            </div>
+        </details>
     </div>
 </div>
 
@@ -188,5 +193,26 @@
     gtag('config', 'G-03QK18XC0D');
 </script>
 
+<script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const url = new URL(window.location.href);
+        const params = url.searchParams;
+        let hasUtm = false;
+
+        Array.from(params.keys()).forEach(key => {
+          if (key.startsWith('utm_')) {
+            params.delete(key);
+            hasUtm = true;
+          }
+        });
+
+        if (hasUtm) {
+          const cleanUrl = url.pathname + (params.toString() ? '?' + params.toString() : '') + url.hash;
+          window.history.replaceState({}, document.title, cleanUrl);
+        }
+      }, 500);
+    });
+</script>
 </body>
 </html>
