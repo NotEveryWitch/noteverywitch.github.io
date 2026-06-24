@@ -1,0 +1,114 @@
+v0.3.1:
+
+    Fixes:
+        Fixed a bug where the cryo-pod girl's quest would freeze up and break if you loaded an old save.
+        Fixed a glitch with extra dialogue choices when handing over a gift from your inventory.
+        Fixed a bug where a girl would get stuck on your screen after closing the inventory.
+        Fixed an issue where Amy would butt into the table chat before she even joined the crew.
+        Tweaked the UI layout so it looks right on tablets.
+        Fixed a bug where Jenny wouldn't show up sometimes if you woke up in the Medbay.
+        Fixed lighting artifacts and banding issues.
+
+v0.3:
+
+    This patch features over 50 new images, not counting backgrounds, prop items, and UI elements.
+
+    Jenny:
+        She can now come out of the shower wearing only a towel.
+
+    Amy:
+        Amy has now started falling off ladders. What a klutz.
+        She can also show off her favorite panties now.
+
+    General – Girls:
+        You can now sit down and have a civilized meal with the crew. Even under the table.
+        Jenny and Molly will now sometimes JUST wash up in the bathroom.
+
+    Missions:
+        Most missions now feature images instead of just text.
+
+    Ship and everything else:
+        Added a photo card collecting mechanic. The Captain keeps all the photos on his personal computer.
+        Added the inventory UI. It is now much easier to navigate through your collected items.
+        Added the ship management UI. For now, you can use it to check out existing rooms and chat with the ship's AI. In the future, this interface will be used for ship upgrades and unlocking new rooms.
+        Added a tutorial mission for maps.
+        Electrical lighting has been installed throughout the ship (well, except for Molly’s room—she was against it).
+        The flower now has an interaction screen. After all, everyone was waiting for this!
+        And much more!
+
+v0.2.2:
+
+    Fixes:
+        Fixed a bug where the ventilation quest could break if you got the key too early.
+
+v0.2.1:
+
+    Fixes:
+        Fixed a critical issue (the "Turkish I" bug) where game objects became invisible or failed to activate if the OS language (Windows / Android) was set to Turkish, Azerbaijani, or Kazakh. Thanks Rendro!
+        Fixed text casing and font rendering issues for German (ß conversion), Greek, and French.
+        The game should now run flawlessly regardless of your operating system's regional and culture settings.
+        Fixed a bug where the shower door would remain closed after Jenny left, but objects could still be clicked.
+
+v0.2:
+
+    A note regarding this version:
+        In 0.2, I spent a lot of time on animations (Amy's idle, hugs with three characters, the scene with the girl from the cryo-pod),so there isn't as much content as I originally planned. In the next patch, I will likely focus on static CGs
+        (otherwise, there ends up being too much text without visuals).
+        I also want to expand and balance missions in the future to make flights more engaging.
+        Additionally, I don't like the current way relationship levels work and would like to make it clearer in the future.
+
+        I will be very happy to receive feedback, advice, comments, and ideas!
+
+    Story:
+        The storyline with the girl from the cryo-pod has been continued, including one animated NSFW scene and several NSFW images.
+
+    Jenny:
+        Jenny can tell your fortune for tomorrow.
+        Added another, strange way to get into the Med Bay.
+        I re-recorded Jenny's old moans because I didn't like them (didn't like the sound quality).
+
+    Amy:
+        Amy now has a schedule; she moves around the ship and has her own cabin.
+        Amy never washes because she hates water. But when it does, you can peek at her in the bathroom.
+        You can grab Amy by the butt on the stairs (doesn't cause a fall yet).
+        It turns out the Captain and Amy are fans of the same popular TV series! Who would have thought?
+
+    General – Girls:
+        Added the ability to hug all the girls.
+        All characters now have an animation when hugging.
+        Voiced moans for Molly and Amy during interactions, 46 new moans (I voice everyone alone, so they might sound similar for different girls, lol. But I tried!).
+        "Favor" system. The girls can owe the Captain a service...
+        You can now give gifts to the girls (and trade with them).
+        The Captain now has a superpower to know how many pairs of panties the girls have left and if they are wearing them right now.
+        Events (text and visuals) now change depending on whether a girl is wearing panties (where applicable).
+
+    Missions:
+        Missions are now more varied, with more choices that actually affect things.
+        Added various new random encounters in missions (unfortunately text-only for now).
+        New mission start screen. Several missions are now available to choose from, but they currently differ only in rewards.
+
+    Ship and everything else:
+        We finally got ventilation on the ship.
+        Space has become more... spacey!
+        Added various visual effects (receiving an item, ship shaking, etc.).
+        Time-of-day changes are now shown visually (don't even ask).
+        A great conversationalist, the Flower, now appears in the Cargo Bay if found in missions.
+        A dialogue history screen has been added.
+        Many other small improvements.
+        Various texts improved.
+        The damn phone is constantly ringing!
+        Many images have been improved and now look better.
+        Added art for some items (inventory is not yet implemented, but they are visible upon receipt).
+
+        The number of lines of text in the game increased by more than 1000 lines (from 1644 to 2736).
+        I honestly don't know how it ended up being so much! I try very hard not to bloat the text component and not to write unnecessary dialogue.
+
+v0.1.1:
+
+    Fixes:
+        Fixed a bug where the game would hang in missions after the Captain's phrase "Molly, any ideas?".
+        Fixed a bug where mood would disappear and girls would stay angry at you permanently.
+
+v0.1:
+
+    Initial demo
