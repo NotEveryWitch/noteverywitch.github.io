@@ -360,7 +360,14 @@
 
       const cryptoDonate = document.getElementById('crypto-donate');
 
+      if (!cryptoDonate) {
+        return;
+      }
+
       cryptoDonate.open = true;
+      requestAnimationFrame(function() {
+        cryptoDonate.scrollIntoView({ block: 'start' });
+      });
     }
 
     window.addEventListener('hashchange', openCryptoDonate);
