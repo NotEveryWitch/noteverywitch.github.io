@@ -276,7 +276,7 @@
             <img src="boosty.svg" class="btn-icon" alt="">
             Boosty
         </a>
-        <details class="crypto-donate">
+        <details id="crypto-donate" class="crypto-donate">
             <summary>
                 <span class="crypto-title">
                     <span class="crypto-icon" aria-hidden="true">$</span>
@@ -353,7 +353,21 @@
 </script>
 
 <script>
+    function openCryptoDonate() {
+      if (window.location.hash !== '#crypto-donate') {
+        return;
+      }
+
+      const cryptoDonate = document.getElementById('crypto-donate');
+
+      cryptoDonate.open = true;
+    }
+
+    window.addEventListener('hashchange', openCryptoDonate);
+
     window.addEventListener('load', function() {
+      openCryptoDonate();
+
       setTimeout(function() {
         const url = new URL(window.location.href);
         const params = url.searchParams;
