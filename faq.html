@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Not Every Witch</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --accent-color: #bb86fc;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 640px;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: 1.8rem;
+        }
+
+        .description {
+            margin: 0 0 20px;
+            color: var(--text-dim);
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 22px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .faq-list {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item > summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 14px 18px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .faq-item > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item > summary::after {
+            content: "›";
+            color: var(--text-dim);
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item[open] > summary::after {
+            transform: rotate(90deg);
+            color: var(--accent-color);
+        }
+
+        .faq-answer {
+            padding: 0 18px 14px;
+            color: var(--text-dim);
+            line-height: 1.55;
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 28px 14px;
+            }
+
+            .faq-item > summary,
+            .faq-answer {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a class="back-link" href="index.html">← Back to main page</a>
+    <h1>FAQ (Contains spoilers!)</h1>
+    <p class="description">
+        Tap any question to see the answer.<br>
+        (!) Some events need to be repeated several times to see all the scenes.<br>
+        (!) Most events depend on your relationship level, which must be increased to progress further.
+    </p>
+
+    <div class="faq-list">
+        <details class="faq-item">
+            <summary>When is the next update?</summary>
+            <div class="faq-answer">
+                Updates are released roughly once a month.<br>
+                The new major version is instantly available to Officer-tier ($10+) supporters, and 2 weeks after that to Crew Member ($5+) supporters. The public always gets the previous major version.
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>Where can I report bugs?</summary>
+            <div class="faq-answer">
+                Please report any bugs to the #bugs channel on <a href="https://discord.gg/yExfFgVVbP" class="link-card">Discord</a>.<br>
+                Thanks!
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>How do I increase the relationship level?</summary>
+            <div class="faq-answer">
+                Each of these works once:<br>
+                Try complimenting the girl.<br><br>
+                There are other methods as well; I'll add them to the FAQ later because I'm lazy...
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>How do I create a mechanic job vacancy?</summary>
+            <div class="faq-answer">
+                Try picking perverted options 😳
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>How do I become a patient in the medbay?</summary>
+            <div class="faq-answer">
+                There are currently four ways to be admitted to the medbay:<br>
+                1) Eat Molly's food from the fridge.<br>
+                2) Climb up fast on the ladder.<br>
+                3) Increase the temperature using the machine in the cargo bay.<br>
+                4) Eat the strange substance from the black lunchbox in the kitchen fridge.
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>How do I complete the ladder event?</summary>
+            <div class="faq-answer">
+                Wait until the girl is near the ladder, click on the ladder, and choose the "Let her go first" option.
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>How do I complete the salt event (Jenny's lunch)?</summary>
+            <div class="faq-answer">
+                Wait until Jenny sits down for lunch in the kitchen and join her. After that, you will be able to hide the salt and ask Jenny to look for it during her next lunch.
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>How do I turn on the alarm?</summary>
+            <div class="faq-answer">
+                Knock on Molly's shower door a few times, until she tells you that if the ship went off course, the alarm on the bridge would be blaring. After that, turn on the alarm on the bridge and choose "Step away." It will keep flashing after you leave.
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>What do Jenny's predictions mean?</summary>
+            <div class="faq-answer">
+                “The heavens shall part in inconsolable lament, realizing under whose pompous and preposterous command we are destined to roam these vast expanses.”<br>
+                It will rain.<br><br>
+
+                “Fate shall grant hours of hallowed indolence: all are free to surrender to sloth and bliss, while our dim-witted leader occupies himself with his sole true talent—nothingness.”<br>
+                Everyone will have a day off.<br><br>
+
+                “Invisible barriers shall crumble, and in an ecstasy of union, even those who once gazed upon you with scorn or mercifully feigned your non-existence shall press you to their hearts.”<br>
+                Everyone will want to hug.<br><br>
+
+                “The hearts of maidens shall grow light, and the mortal shackles of raiment shall be left forgotten in dark chambers, while the self-important chief vainly seeks to discern the hidden ploy behind such sudden liberty.”<br>
+                Everyone will forget to wear underwear.<br><br>
+
+                “Exultation shall overwhelm the world, and the light of coming prosperity shall be so dazzling that even the shadow of our leader's abysmal ignorance and conceit shall fail to darken it.”<br>
+                Everyone will be happy.<br><br>
+
+                “Soon, all shall feel a sacred thirst for ablution, for only a pure stream can wash away the soot of existence, while our blinded leader continues to drown hopelessly in the viscous mire of his own vanity.”<br>
+                Everyone will want to take a shower (even Amy!).
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>How do I open the vent?</summary>
+            <div class="faq-answer">
+                Look for the key in the fridge at night.
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>Why do pink hearts sometimes appear?</summary>
+            <div class="faq-answer">
+                The hearts indicate the girls' horny status. It doesn't affect much for now (some sprites change, and they become more compliant in scenes).
+            </div>
+        </details>
+    </div>
+</div>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-03QK18XC0D"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-03QK18XC0D');
+</script>
+
+<script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const url = new URL(window.location.href);
+        const params = url.searchParams;
+        let hasUtm = false;
+
+        Array.from(params.keys()).forEach(key => {
+          if (key.startsWith('utm_')) {
+            params.delete(key);
+            hasUtm = true;
+          }
+        });
+
+        if (hasUtm) {
+          const cleanUrl = url.pathname + (params.toString() ? '?' + params.toString() : '') + url.hash;
+          window.history.replaceState({}, document.title, cleanUrl);
+        }
+      }, 500);
+    });
+</script>
+</body>
+</html>
