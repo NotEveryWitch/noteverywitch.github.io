@@ -1,5 +1,43 @@
+v0.5:
+
+    Global:
+        Added a new Special Thanks section to the game. This game only exists thanks to your support, so I’ve added the names of supporters who have been with me for a long time. Thank you!
+        You can now unlock a new Lounge on the ship. Let the Captain relax for once!
+        Added a new Camera item. It lets you fill a folder on the Captain’s computer with photos of memorable moments. I plan to expand this feature in the future so the camera may eventually capture a little more than the Captain originally got to see. You can already start building your photo collection with it!
+        Solar Witch has released a new album with 11 tracks! You can listen to it in-game and on the Captain’s computer. Music has also been added to many locations and events.
+        Added a travel map for moving between unlocked locations. New coordinates can be discovered during missions. This feature will be expanded further in future updates.
+        Added Turkish localization.
+        In the browser version, save files can now be downloaded and uploaded again later.
+        Added around 70 new images, not counting UI elements or edits to existing artwork.
+
+    General – Girls:
+        Each girl now has her own interactive scene for watching TV together.
+        Expanded and refined the girls’ reactions to compliments, gifts, punishments, and several existing interactions.
+        When a girl is eating, you can now sit down and join her individually, instead of only being able to join Jenny or everyone at once.
+
+    Missions:
+        Added new story missions, marked with a star, which unlock the Lounge and a new trade route.
+        Shops now have a proper interface. Their inventories and prices have also been reworked.
+        Many items, including the girls’ panties, Jenny’s uniform, and more, now have their own illustrations.
+
+    UI:
+        Updated the look and animations of the main game windows, choices, journal, quest log, inventory, menus, and save/load screens.
+        Improved UI scaling and safe-area handling on mobile devices.
+        Added tooltips to the girl info screen for relationship level, mood, panties, demerit points, and favors.
+
+    Fixes:
+        If the Captain is supposed to receive an item as a mission reward but already owns it, the dialogue now explains why he doesn’t get another copy.
+        You can now continue moving between locations while holding Ctrl.
+        Fixed a bug that could cause Molly’s mood state to disappear and leave her permanently in a bad mood.
+        Fixed the ventilation unlock logic and restored the correct quest progress when loading older saves.
+        Fixed returning to dialogue after hugs and certain story dialogue. Conversations should no longer end unexpectedly.
+        Fixed various issues with long text, fonts, dialogue history, and UI elements at different screen resolutions.
+        Fixed many typos, punctuation errors, and minor scene display issues.
+
+    And much more!
+
 v0.4:
-    ⚠️ WARNING: Loading an old save file will reset your relationship status with the girls due to the rework.
+    WARNING: Loading an old save file will reset your relationship status with the girls due to the rework.
 
     Story:
         The Captain's got a plan... and so, the story continues
