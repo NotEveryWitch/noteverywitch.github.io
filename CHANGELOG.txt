@@ -1,3 +1,8 @@
+v0.5.1:
+
+    Fixes:
+        Fixed issues related to loading old saves.
+
 v0.5:
 
     Global:
