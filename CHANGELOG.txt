@@ -1,3 +1,18 @@
+v0.5.3:
+
+    Fixes:
+        Fixed an animation error in the night scene with the girl from the cryo-pod.
+        Fixed a bug where Molly would sometimes run out of the shower the moment the alarm went off.
+        Fixed a bug where the "Relax in the lounge" quest could get stuck in older saves.
+        Fixed a crash when closing the shop. Esc also no longer stops responding after certain windows are closed.
+        Fixed a crash when pressing interface buttons such as skip time or inventory at a moment when nothing was assigned to them.
+        Fixed a crash when starting a custom scenario.
+
+v0.5.2:
+
+    Fixes:
+        Fixed some rendering errors.
+
 v0.5.1:
 
     Fixes:
