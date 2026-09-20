@@ -1,3 +1,44 @@
+v0.6:
+
+    General:
+        Added Star Duel—a full-fledged card mini-game integrated directly into the story.
+        The girls no longer follow fixed schedules. Each now has her own needs—Energy, Hunger, Hygiene, and Fun—as well as Mood, and decides for herself where to go and what to do.
+        The girls now actually walk between rooms instead of teleporting, so you can run into them along the way.
+        Crew Morale has been replaced with Well-being, reflecting how comfortable the girls are living aboard the ship.
+        Ship hull damage now carries over between missions, and Amy repairs it during her working hours.
+        Added 41 card illustrations and around 30 new visuals, including character art, items, and Photo Cards.
+
+    Star Duel:
+        A card game played strictly by Alliance rules—which means strip rules apply.
+        You can play against Amy, Jenny, and even Flower (who unfortunately doesn't strip), as well as the Pirate, the Alliance Commander, and the Party Girl from the Indestructible cruise liner. Molly refuses to play... but ask her anyway.
+        The mini-game has its own music track and sound effects.
+
+    General – Girls:
+        The girls now decide where to go based on what they need most: if they're hungry, they'll head to the Kitchen; if they need a shower, they'll go to the Bathroom; if they're bored, they'll watch TV or use the arcade machine in the Lounge.
+        After showering, girls now walk back to their cabins to get dressed instead of instantly appearing there. That means you might run into one wearing nothing but a towel along the way—including on the ladder.
+        Running into a towel-clad Amy on the ladder can now trigger a new scene involving a fall, Photo Cards, and another penalty point.
+        You can now catch Amy changing in her cabin. She's not happy about the broken door—and she's even less happy with the Captain.
+        During Jenny's ladder encounter, you can now choose whether or not to tear her uniform.
+        Missions wear everyone out. Sleep, food, showers, and downtime help them recover.
+        Molly now gets proper days off. If the pilot is resting, the ship isn't going anywhere.
+
+    Missions:
+        Law-abiding pirates are now roaming space! You can even buy fake papers from them to clear your Wanted status.
+        Added and updated several encounters, including the Alliance Patrol Ship, the Indestructible cruise liner, and the Alliance Military Base. You can now return a stolen item there to clear your Wanted status.
+
+    UI & UX:
+        Added a Well-being section to each girl's Diary page, with an expandable panel showing Energy, Hunger, Hygiene, Fun, and Mood.
+        The Mission screen now shows Crew Well-being and Hull Integrity instead of Morale.
+        Added horizontal navigation arrows to the Inventory, so there's room for the ever-growing pile of stuff.
+        On mobile devices, frame rate and resolution now adjust automatically based on the device's thermal state.
+        Made a number of smaller performance improvements: fewer unnecessary UI redraws, HDR is now enabled only in scenes that actually need it, and texture settings have been optimized.
+
+    Bug Fixes:
+        Fixed an issue that could corrupt saves made in the middle of a scene.
+        Fixed the bet with Molly during the horror movie: the scene can now be triggered even if the Captain has no money, and the bet will always trigger after choosing "Wait" once.
+
+    ...and much more!
+
 v0.5.3:
 
     Fixes:
