@@ -1,3 +1,29 @@
+v0.6.1:
+
+    Star Duel:
+        Clicking the close (X) button now asks for confirmation before exiting a duel.
+        Leaving the deck-building screen with unsaved changes will now trigger a warning that your changes will be lost.
+        The preparation screen now displays your collection progress—showing how many unique cards you've collected out of the total available.
+
+    Global:
+        Save files can now be exported and imported on Windows and Android (previously browser-only). This makes it easy to transfer your progress between devices—for example, from phone to PC.
+
+    Economy:
+    Nobody likes grinding! Prices have been lowered and rewards increased:
+        Star Duel booster packs at the Trading Ring now cost 50% less.
+        VHS tapes at the Trading Ring now cost 50% less.
+        Mission Money rewards have been doubled.
+        Loading a save from an older version will now grant the Captain 100 Money to make up for the lower earnings in previous versions.
+
+    Fixes:
+        Fixed a quest log crash when loading older saves that contained a now-removed quest.
+        Fixed vibration-related errors during Star Duel on Android devices without vibration permissions. The duel will now simply proceed without vibration.
+        Fixed a potential crash when targeting with a card in Star Duel.
+        Fixed a memory leak where entering Star Duel or the preparation screen left duplicate card artwork in memory. Over long sessions—especially on mobile—this could lead to crashes.
+        Moving between locations has been slightly optimized: the camera no longer unnecessarily recreates render buffers.
+        Scenario Editor (Windows): Deleting or renaming a scenario folder while the list is open no longer breaks the editor. The list now simply refreshes.
+
+
 v0.6:
 
     General:
@@ -33,7 +59,7 @@ v0.6:
         On mobile devices, frame rate and resolution now adjust automatically based on the device's thermal state.
         Made a number of smaller performance improvements: fewer unnecessary UI redraws, HDR is now enabled only in scenes that actually need it, and texture settings have been optimized.
 
-    Bug Fixes:
+    Fixes:
         Fixed an issue that could corrupt saves made in the middle of a scene.
         Fixed the bet with Molly during the horror movie: the scene can now be triggered even if the Captain has no money, and the bet will always trigger after choosing "Wait" once.
 
