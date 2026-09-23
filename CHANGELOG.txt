@@ -1,3 +1,8 @@
+v0.6.2:
+
+    Fixes:
+        Items without sprites no longer display an error message when added to the inventory.
+
 v0.6.1:
 
     Star Duel:
