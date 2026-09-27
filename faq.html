@@ -60,8 +60,17 @@
             overflow: hidden;
         }
 
+        .faq-section {
+            margin: 28px 0 10px 5px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+        }
+
         .faq-item {
             border-bottom: 1px solid #2a2a2a;
+            scroll-margin-top: 16px;
         }
 
         .faq-item:last-child {
@@ -102,6 +111,61 @@
             font-size: 0.92rem;
         }
 
+        .faq-answer a,
+        .spoiler > summary {
+            color: var(--accent-color);
+        }
+
+        .faq-answer ul {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+
+        .faq-answer li + li {
+            margin-top: 4px;
+        }
+
+        .faq-answer code {
+            color: var(--text-main);
+            overflow-wrap: anywhere;
+        }
+
+        .faq-answer mark {
+            background: #463821;
+            color: #ffe1a1;
+            padding: 0 0.16em;
+            border-radius: 2px;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+
+        .spoiler {
+            margin-top: 10px;
+        }
+
+        .spoiler > summary {
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .spoiler[open] > summary {
+            margin-bottom: 6px;
+        }
+
+        .prophecy {
+            margin: 16px 0 4px;
+            padding-left: 12px;
+            border-left: 2px solid #3c3346;
+            color: #929099;
+            font-style: italic;
+        }
+
+        .prophecy-meaning {
+            margin: 0;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
         @media (max-width: 480px) {
             body {
                 padding: 28px 14px;
@@ -125,99 +189,270 @@
         (!) Most events depend on your relationship level, which must be increased to progress further.
     </p>
 
+    <h2 class="faq-section">The game</h2>
     <div class="faq-list">
-        <details class="faq-item">
-            <summary>When is the next update?</summary>
+        <details class="faq-item" id="updates">
+            <summary>When is the next update, and what's new?</summary>
             <div class="faq-answer">
-                Updates are released roughly once a month.<br>
+                Updates are released roughly once a month. What's new is in the <a href="CHANGELOG.txt">changelog</a>.<br><br>
                 The new major version is instantly available to Officer-tier ($10+) supporters, and 2 weeks after that to Crew Member ($5+) supporters. The public always gets the previous major version.
             </div>
         </details>
-        <details class="faq-item">
-            <summary>Where can I report bugs?</summary>
+        <details class="faq-item" id="saves">
+            <summary>Where are my saves, and how do I move them?</summary>
             <div class="faq-answer">
-                Please report any bugs to the #bugs channel on <a href="https://discord.gg/yExfFgVVbP" class="link-card">Discord</a>.<br>
+                On Windows, saves are stored outside the game folder, in <code>%USERPROFILE%\AppData\LocalLow\Not Every Witch\Course to Venus!</code>, so a new version finds them automatically.<br><br>
+                On Android, <mark>install the new version over the old one</mark>. Don't uninstall the game first: uninstalling deletes its local saves.<br><br>
+                To move your progress to another device, press “Download save” in the Save menu, then “Load save file” in the Load menu on the other device. On Windows and Android, this requires v0.6.1 or newer.<br><br>
+                In the browser version, saves are stored in the browser and can be lost. In incognito mode, <mark>they disappear when your private browsing session ends</mark>. Download a copy from time to time.
+            </div>
+        </details>
+        <details class="faq-item" id="feedback">
+            <summary>Where can I report a bug or suggest an idea?</summary>
+            <div class="faq-answer">
+                Please report bugs in the #bugs channel on <a href="https://discord.gg/yExfFgVVbP">Discord</a>. Include your game version, device, and what happened. Ideas and suggestions are welcome there too.<br>
                 Thanks!
             </div>
         </details>
-        <details class="faq-item">
+    </div>
+
+    <h2 class="faq-section">Relationships</h2>
+    <div class="faq-list">
+        <details class="faq-item" id="relationship">
             <summary>How do I increase the relationship level?</summary>
             <div class="faq-answer">
                 Get to know the girls: ask about their interests, give sincere compliments, help them take a break from work, eat together, and offer a hug when they are comfortable with it.<br><br>
-                Gifts also help. Jenny likes esoteric books, Molly collects vinyl records, and Amy loves collectible figures.<br><br>
-                Most relationship rewards are granted only once, so repeating the same action will not keep raising the level. If a girl is upset or refuses, give her some space and try a different friendly activity later.
+                Gifts also help: Jenny likes esoteric books, Molly collects vinyl records, and Amy loves collectible figures. Trading doesn't count.<br><br>
+                All relationship rewards are granted <mark>only once</mark>, so repeating the same action will not keep raising the level. If a girl is upset or refuses, give her some space and try a different friendly activity later.<br><br>
+                The highest level in the current version is 4.
             </div>
         </details>
-        <details class="faq-item">
-            <summary>How do I create a mechanic job vacancy?</summary>
+        <details class="faq-item" id="well-being">
+            <summary>What is Well-being, and how is it different from relationship?</summary>
             <div class="faq-answer">
-                Try picking perverted options 😳
+                Relationship shows how close a girl is to the Captain, and it never goes down. Well-being shows how she feels right now: sleep, food, shower, fun and mood.<br><br>
+                The girls restore Well-being on their own. Missions wear them out, and a worn-out crew can't start the next one, so let them rest between flights.
             </div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item" id="hearts">
+            <summary>Why do pink hearts sometimes appear?</summary>
+            <div class="faq-answer">
+                The hearts show that a girl is horny: she agrees to some scenes one relationship level earlier. It wears off in a few days.
+            </div>
+        </details>
+    </div>
+
+    <h2 class="faq-section">Scenes and events</h2>
+    <div class="faq-list">
+        <details class="faq-item" id="amy-shower">
+            <summary>Amy never showers. How do I see her shower, towel and changing scenes?</summary>
+            <div class="faq-answer">
+                Amy's Hygiene never drops, so she only showers <mark>after Jenny predicts that everyone will want a shower</mark>. Then you can “Peek”.<br><br>
+                The towel and changing scenes start when you interrupt her shower.
+                <details class="spoiler">
+                    <summary>Show hint</summary>
+                    Turn on the <a href="#alarm">alarm</a> and shout “Alarm!” at the shower door. Later, visit her cabin while she's changing.
+                </details>
+            </div>
+        </details>
+        <details class="faq-item" id="movie-night">
+            <summary>Movie night: which tapes does each girl like?</summary>
+            <div class="faq-answer">
+                Buy VHS tapes at the Trade Ring and play one when a girl is watching TV in the <a href="#lounge">Lounge</a>.
+                <ul>
+                    <li>Jenny: comedy and romance.</li>
+                    <li>Molly: comedy and horror. Try horror when you two are alone 😏</li>
+                    <li>Amy: comedy and Astral Maiden Chronicles (found on missions, not sold).</li>
+                </ul>
+                Nobody appreciates the Erotic Movie.
+            </div>
+        </details>
+        <details class="faq-item" id="tv-scene">
+            <summary>How do I unlock the TV scenes?</summary>
+            <div class="faq-answer">
+                While a girl is watching TV in the Lounge, choose “Sit closer”, then “Put hand on her knee”. You need relationship level 4 (3 if she's horny), and the less she's wearing, the shyer she is. Works <mark>once a day</mark>.
+            </div>
+        </details>
+        <details class="faq-item" id="alarm">
+            <summary>How do I turn the alarm on and off?</summary>
+            <div class="faq-answer">
+                Knock on Molly's shower door to learn about the alarm. Then click the keyboard on the bridge, choose “Press any key” and “Leave”.<br><br>
+                While the alarm is on, shout “Alarm!” at the shower door to make Amy or Molly run out in a towel.<br><br>
+                To turn it off, click the keyboard again. It also stops by itself after a while.
+            </div>
+        </details>
+        <details class="faq-item" id="predictions">
+            <summary>What do Jenny's predictions mean?</summary>
+            <div class="faq-answer">
+                Each prediction comes true <mark>the next day</mark>.
+
+                <blockquote class="prophecy">“The heavens shall part in inconsolable lament, realizing under whose pompous and preposterous command we are destined to roam these vast expanses.”</blockquote>
+                <p class="prophecy-meaning">It will rain.</p>
+
+                <blockquote class="prophecy">“Fate shall grant hours of hallowed indolence: all are free to surrender to sloth and bliss, while our dim-witted leader occupies himself with his sole true talent—nothingness.”</blockquote>
+                <p class="prophecy-meaning">Everyone will have a day off.</p>
+
+                <blockquote class="prophecy">“Invisible barriers shall crumble, and in an ecstasy of union, even those who once gazed upon you with scorn or mercifully feigned your non-existence shall press you to their hearts.”</blockquote>
+                <p class="prophecy-meaning">Everyone will want to hug.</p>
+
+                <blockquote class="prophecy">“The hearts of maidens shall grow light, and the mortal shackles of raiment shall be left forgotten in dark chambers, while the self-important chief vainly seeks to discern the hidden ploy behind such sudden liberty.”</blockquote>
+                <p class="prophecy-meaning">Everyone will forget to wear underwear.</p>
+
+                <blockquote class="prophecy">“Exultation shall overwhelm the world, and the light of coming prosperity shall be so dazzling that even the shadow of our leader's abysmal ignorance and conceit shall fail to darken it.”</blockquote>
+                <p class="prophecy-meaning">Everyone will be happy.</p>
+
+                <blockquote class="prophecy">“Soon, all shall feel a sacred thirst for ablution, for only a pure stream can wash away the soot of existence, while our blinded leader continues to drown hopelessly in the viscous mire of his own vanity.”</blockquote>
+                <p class="prophecy-meaning">Everyone will want to take a shower (even Amy!).</p>
+            </div>
+        </details>
+        <details class="faq-item" id="ladder">
+            <summary>How do I complete the ladder event?</summary>
+            <div class="faq-answer">
+                Wait until the girl is near the ladder, click on the ladder, and let her go first (for example, “Let Molly go first”).
+            </div>
+        </details>
+        <details class="faq-item" id="salt">
+            <summary>How do I complete the salt event (Jenny's lunch)?</summary>
+            <div class="faq-answer">
+                Wait until Jenny sits down for lunch in the kitchen, join her and choose “Ask to pass the salt”. After that, you will be able to hide the salt and ask Jenny to look for it during her next lunch.
+            </div>
+        </details>
+        <details class="faq-item" id="medbay">
             <summary>How do I become a patient in the medbay?</summary>
             <div class="faq-answer">
                 There are currently four ways to be admitted to the medbay:<br>
                 1) Eat Molly's food from the fridge.<br>
                 2) Climb up fast on the ladder.<br>
                 3) Increase the temperature using the machine in the cargo bay.<br>
-                4) Eat the strange substance from the black lunchbox in the kitchen fridge.
+                4) <mark>During the day</mark>, eat the strange substance from the black lunchbox in the kitchen fridge.
             </div>
         </details>
-        <details class="faq-item">
-            <summary>How do I complete the ladder event?</summary>
-            <div class="faq-answer">
-                Wait until the girl is near the ladder, click on the ladder, and choose the "Let her go first" option.
-            </div>
-        </details>
-        <details class="faq-item">
-            <summary>How do I complete the salt event (Jenny's lunch)?</summary>
-            <div class="faq-answer">
-                Wait until Jenny sits down for lunch in the kitchen and join her. After that, you will be able to hide the salt and ask Jenny to look for it during her next lunch.
-            </div>
-        </details>
-        <details class="faq-item">
-            <summary>How do I turn on the alarm?</summary>
-            <div class="faq-answer">
-                Knock on Molly's shower door a few times, until she tells you that if the ship went off course, the alarm on the bridge would be blaring. After that, turn on the alarm on the bridge and choose "Step away." It will keep flashing after you leave.
-            </div>
-        </details>
-        <details class="faq-item">
-            <summary>What do Jenny's predictions mean?</summary>
-            <div class="faq-answer">
-                “The heavens shall part in inconsolable lament, realizing under whose pompous and preposterous command we are destined to roam these vast expanses.”<br>
-                It will rain.<br><br>
+    </div>
 
-                “Fate shall grant hours of hallowed indolence: all are free to surrender to sloth and bliss, while our dim-witted leader occupies himself with his sole true talent—nothingness.”<br>
-                Everyone will have a day off.<br><br>
-
-                “Invisible barriers shall crumble, and in an ecstasy of union, even those who once gazed upon you with scorn or mercifully feigned your non-existence shall press you to their hearts.”<br>
-                Everyone will want to hug.<br><br>
-
-                “The hearts of maidens shall grow light, and the mortal shackles of raiment shall be left forgotten in dark chambers, while the self-important chief vainly seeks to discern the hidden ploy behind such sudden liberty.”<br>
-                Everyone will forget to wear underwear.<br><br>
-
-                “Exultation shall overwhelm the world, and the light of coming prosperity shall be so dazzling that even the shadow of our leader's abysmal ignorance and conceit shall fail to darken it.”<br>
-                Everyone will be happy.<br><br>
-
-                “Soon, all shall feel a sacred thirst for ablution, for only a pure stream can wash away the soot of existence, while our blinded leader continues to drown hopelessly in the viscous mire of his own vanity.”<br>
-                Everyone will want to take a shower (even Amy!).
+    <h2 class="faq-section">Quests</h2>
+    <div class="faq-list">
+        <details class="faq-item" id="mechanic">
+            <summary>How do I hire a mechanic (the third girl)?</summary>
+            <div class="faq-answer">
+                Post a job ad on FindIn (the computer in the Captain's cabin) and try picking perverted options 😳 You can post one ad a day. Then check FindIn every few days for replies.
+                <details class="spoiler">
+                    <summary>Show hint</summary>
+                    Choose “Looking for a cute girl” and put <mark>all three perverted options in one ad</mark>: “At least a C-cup”, “Can do the splits” and “Single”.
+                </details>
             </div>
         </details>
-        <details class="faq-item">
-            <summary>How do I open the vent?</summary>
+        <details class="faq-item" id="lunch">
+            <summary>How do I complete “I should probably have lunch with everyone”?</summary>
             <div class="faq-answer">
-                Look for the key in the fridge at night.
+                You don't need the whole crew: join any girl eating in the kitchen, then find an excuse to crawl under the table 😏
+                <details class="spoiler">
+                    <summary>Show hint</summary>
+                    Click the fork and choose “Drop”.
+                </details>
             </div>
         </details>
-        <details class="faq-item">
-            <summary>Why do pink hearts sometimes appear?</summary>
+        <details class="faq-item" id="ice">
+            <summary>What is the ice for?</summary>
             <div class="faq-answer">
-                The hearts indicate the girls' horny status. It doesn't affect much for now (some sprites change, and they become more compliant in scenes).
+                Sell it to the Indestructible cruise ship. Your first delivery gets you a camera.<br><br>
+                On a mission, you may meet the Indestructible throwing a pool party. Answer the call and ask for <mark>“Route advice”</mark> to get the iceberg's coordinates. Fly there using the Star map on the bridge computer, choose “Mine Ice”, then deliver the ice to the Indestructible.
+            </div>
+        </details>
+        <details class="faq-item" id="camera">
+            <summary>Where do I get a camera, and where are my photos?</summary>
+            <div class="faq-answer">
+                You get it for your first ice delivery (see <a href="#ice">ice</a>). The camera <mark>works automatically</mark>: you don't need to use it manually. The Captain takes photos of memorable moments, which you can find on the computer in his cabin, in the “Chicks” folder.
+            </div>
+        </details>
+        <details class="faq-item" id="red-phone">
+            <summary>What does the red phone do? What number do I call?</summary>
+            <div class="faq-answer">
+                Only one number works. Hint: click the Indestructible cruise ship ad in the main menu and read their website carefully.
+                <details class="spoiler">
+                    <summary>Show hint</summary>
+                    Dial 1207, then press 1. The compensation is… modest.
+                </details>
+            </div>
+        </details>
+        <details class="faq-item" id="vent">
+            <summary>How do I open the vent, and what's inside?</summary>
+            <div class="faq-answer">
+                Once the Captain needs the key, look for it in the black lunchbox in the kitchen fridge, <mark>in the evening or at night</mark>. If the lunchbox isn't there yet, it's too early to open the vent — <mark>keep progressing through the story</mark>.<br><br>
+                With the key, enter the ducts from different rooms and look into every opening, until something looks back at you 👀
+            </div>
+        </details>
+        <details class="faq-item" id="lounge">
+            <summary>How do I set up the Lounge? (“I'm sick of all this! I need to finally get some rest!”)</summary>
+            <div class="faq-answer">
+                Complete the “Work and Play” mission to get the Lounge Assembly Kit. It appears <mark>after the story with the missing girl</mark>.<br><br>
+                Then open “Ship control” on the bridge, select the Lounge and press “Install”. The Lounge will then appear in the ship's location list.
+            </div>
+        </details>
+        <details class="faq-item" id="clues">
+            <summary>How do I find clues for the investigation board?</summary>
+            <div class="faq-answer">
+                The first lead comes from TV: once the <a href="#lounge">Lounge</a> is set up, watch TV there <mark>when no one else is watching</mark>. Then open the first case on the board and choose “Investigate this theory”.<br><br>
+                The other notes on the board are locked in the current version.
+                <details class="spoiler">
+                    <summary>Show hint</summary>
+                    <ul>
+                        <li>Quarantine: declare it on the bridge.</li>
+                        <li>Harpoon: ask Amy “About investigation”.</li>
+                        <li>Something suspicious: use the magnifying glass in the kitchen.</li>
+                        <li>Motion sensor: ask Amy.</li>
+                        <li>Night patrol: after the quarantine, check the vents in the evening or at night.</li>
+                    </ul>
+                </details>
+            </div>
+        </details>
+    </div>
+
+    <h2 class="faq-section">Star Duel</h2>
+    <div class="faq-list">
+        <details class="faq-item" id="star-duel">
+            <summary>How do I start playing Star Duel, and who can I play with?</summary>
+            <div class="faq-answer">
+                Once Amy joins the crew, cards start turning up around the ship. Ask Amy about them, <mark>collect 12</mark>, then ask her: “Teach me how to play Star Duel”.<br><br>
+                After that, you can play Amy and Jenny from their talk menu, Flower in the cargo bay, and some rivals you meet on missions. Molly always refuses.
+            </div>
+        </details>
+        <details class="faq-item" id="cards">
+            <summary>How do I get more cards?</summary>
+            <div class="faq-answer">
+                One card lies in almost every room, Amy keeps a few in her lunchbox in the kitchen fridge, the Space Pirate gives one after a match, and the rest come in booster packs at the Trade Ring. When the packs disappear from the shop, you have all the booster cards.
             </div>
         </details>
     </div>
 </div>
+
+<script>
+    function openFaqItem(id) {
+      const item = document.getElementById(id);
+      if (!item || !item.classList.contains('faq-item')) {
+        return;
+      }
+      item.open = true;
+      item.scrollIntoView({ block: 'start' });
+    }
+
+    function openFaqItemFromHash() {
+      openFaqItem(decodeURIComponent(window.location.hash.slice(1)));
+    }
+
+    document.addEventListener('click', function(event) {
+      if (event.defaultPrevented || event.button !== 0 ||
+          event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) {
+        return;
+      }
+      const link = event.target.closest('a[href^="#"]');
+      if (link) {
+        openFaqItem(link.getAttribute('href').slice(1));
+      }
+    });
+
+    window.addEventListener('hashchange', openFaqItemFromHash);
+    openFaqItemFromHash();
+</script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-03QK18XC0D"></script>
