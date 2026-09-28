@@ -80,13 +80,13 @@
         .faq-item > summary {
             list-style: none;
             cursor: pointer;
-            padding: 14px 18px;
+            padding: 14px 12px;
             font-size: 0.95rem;
             font-weight: 600;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 12px;
+            gap: 8px;
         }
 
         .faq-item > summary::-webkit-details-marker {
@@ -95,6 +95,7 @@
 
         .faq-item > summary::after {
             content: "›";
+            flex-shrink: 0;
             color: var(--text-dim);
             transition: transform 0.2s ease;
         }
@@ -102,6 +103,44 @@
         .faq-item[open] > summary::after {
             transform: rotate(90deg);
             color: var(--accent-color);
+        }
+
+        .faq-question {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .faq-permalink {
+            display: inline-flex;
+            flex: 0 0 24px;
+            height: 32px;
+            margin: -6px 0;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            color: var(--text-dim);
+            text-decoration: none;
+        }
+
+        .faq-permalink:hover,
+        .faq-permalink:focus-visible,
+        .faq-permalink.is-copied {
+            color: var(--accent-color);
+            background: #2b2336;
+        }
+
+        .faq-permalink:focus-visible {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip-path: inset(50%);
+            white-space: nowrap;
         }
 
         .faq-answer {
@@ -171,7 +210,6 @@
                 padding: 28px 14px;
             }
 
-            .faq-item > summary,
             .faq-answer {
                 padding-left: 12px;
                 padding-right: 12px;
@@ -425,7 +463,54 @@
     </div>
 </div>
 
+<span id="faq-copy-status" class="visually-hidden" role="status"></span>
+
 <script>
+    const copyStatus = document.getElementById('faq-copy-status');
+    let copiedLink = null;
+    let copyResetTimer;
+
+    document.querySelectorAll('.faq-item[id]').forEach(function(item) {
+      const summary = item.querySelector('summary');
+      const question = document.createElement('span');
+      question.className = 'faq-question';
+      question.append(...summary.childNodes);
+
+      const link = document.createElement('a');
+      link.className = 'faq-permalink';
+      link.href = '#' + item.id;
+      link.textContent = '#';
+      link.title = 'Copy link to this answer';
+      link.setAttribute('aria-label', 'Copy link to: ' + question.textContent.trim());
+      summary.append(link, question);
+    });
+
+    async function copyFaqLink(link) {
+      const url = link.href;
+      try {
+        await navigator.clipboard.writeText(url);
+      } catch {
+        window.prompt('Copy this link:', url);
+        return;
+      }
+
+      clearTimeout(copyResetTimer);
+      if (copiedLink) {
+        copiedLink.textContent = '#';
+        copiedLink.classList.remove('is-copied');
+      }
+      copiedLink = link;
+      link.textContent = '✓';
+      link.classList.add('is-copied');
+      copyStatus.textContent = 'Link copied.';
+      copyResetTimer = setTimeout(function() {
+        link.textContent = '#';
+        link.classList.remove('is-copied');
+        copyStatus.textContent = '';
+        copiedLink = null;
+      }, 2000);
+    }
+
     function openFaqItem(id) {
       const item = document.getElementById(id);
       if (!item || !item.classList.contains('faq-item')) {
@@ -447,6 +532,9 @@
       const link = event.target.closest('a[href^="#"]');
       if (link) {
         openFaqItem(link.getAttribute('href').slice(1));
+        if (link.classList.contains('faq-permalink')) {
+          copyFaqLink(link);
+        }
       }
     });
 
