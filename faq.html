@@ -535,6 +535,17 @@
         if (link.classList.contains('faq-permalink')) {
           copyFaqLink(link);
         }
+        return;
+      }
+
+      const summary = event.target.closest('.faq-item > summary');
+      if (summary) {
+        const item = summary.parentElement;
+        if (!item.open) {
+          history.replaceState(history.state, '', '#' + item.id);
+        } else if (window.location.hash === '#' + item.id) {
+          history.replaceState(history.state, '', window.location.pathname + window.location.search);
+        }
       }
     });
 
