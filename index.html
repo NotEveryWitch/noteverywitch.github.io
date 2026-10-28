@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Every Witch</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --accent-color: #bb86fc;
+            --steam-color: #1b2838;
+            --patreon-color: #ff424d;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            background-image: url('avatar.png');
+            background-size: cover;
+            background-position: center;
+            display: inline-block;
+        }
+
+        h1 {
+            display: flex;
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            margin: 20px 0 10px 5px;
+        }
+
+        .links-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .link-card {
+            background-color: var(--card-bg);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 16px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .link-card:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-color);
+            background-color: #252525;
+        }
+
+        .crypto-donate {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 16px;
+            text-align: left;
+            color: var(--text-main);
+            overflow: hidden;
+        }
+
+        .crypto-donate summary {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px;
+            font-weight: 600;
+            list-style: none;
+            transition: all 0.2s ease;
+        }
+
+        .crypto-donate summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .crypto-donate summary:hover {
+            background-color: #252525;
+        }
+
+        .crypto-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .crypto-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .crypto-chevron {
+            width: 9px;
+            height: 9px;
+            border-right: 2px solid var(--text-dim);
+            border-bottom: 2px solid var(--text-dim);
+            transform: rotate(45deg);
+            transition: transform 0.2s ease;
+        }
+
+        .crypto-donate[open] .crypto-chevron {
+            transform: rotate(225deg);
+        }
+
+        .crypto-donate-content {
+            padding: 0 18px 18px;
+        }
+
+        .crypto-donate p {
+            margin: 0 0 14px;
+            color: var(--text-dim);
+            font-size: 0.88rem;
+            line-height: 1.45;
+        }
+
+        .wallet-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .wallet-label {
+            display: block;
+            color: var(--text-main);
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .wallet-address {
+            display: block;
+            overflow-wrap: anywhere;
+            color: var(--text-dim);
+            background-color: #101010;
+            border: 1px solid #2b2b2b;
+            border-radius: 10px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 0.78rem;
+            line-height: 1.35;
+        }
+
+        .btn-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+            object-fit: contain;
+        }
+
+        .steam-btn {
+            border-color: #66c0f4;
+        }
+
+        .nsfw-badge {
+            background: #cf6679;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-left: 5px;
+        }
+
+        .soc-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin: 40px 0 15px 0;
+            opacity: 0.8;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+        }
+
+        .soc-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+
+        .soc-icon {
+            width: 28px;
+            height: 28px;
+            transition: 0.2s;
+            opacity: 0.7;
+        }
+
+        .soc-icon:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .disclaimer {
+            font-size: 0.75rem;
+            color: #555;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="avatar"></div>
+    <h1>Not Every Witch <span class="nsfw-badge">18+</span></h1>
+    <p class="description">
+        Independent developer of erotic games<br>
+        Follow the journey and support the project below
+    </p>
+
+    <div class="section-title">Support & Early Access</div>
+    <div class="links-group">
+        <a href="https://patreon.com/NotEveryWitch?utm_medium=referral&utm_source=site&utm_campaign=page"
+           class="link-card">
+            <img src="patreon.svg" class="btn-icon" alt="">
+            Patreon
+        </a>
+        <a href="https://subscribestar.adult/noteverywitch?utm_medium=referral&utm_source=site&utm_campaign=page"
+           class="link-card">
+            <img src="subscribestar.png" class="btn-icon" alt="">
+            SubscribeStar
+        </a>
+        <a href="https://boosty.to/noteverywitch?utm_medium=referral&utm_source=site&utm_campaign=page"
+           class="link-card">
+            <img src="boosty.svg" class="btn-icon" alt="">
+            Boosty
+        </a>
+        <details id="crypto-donate" class="crypto-donate">
+            <summary>
+                <span class="crypto-title">
+                    <span class="crypto-icon" aria-hidden="true">$</span>
+                    Crypto Donate
+                </span>
+                <span class="crypto-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="crypto-donate-content">
+                <p>
+                    Thank you for supporting my work! Any amount is deeply appreciated ❤️<br>
+                    If you donate $10+, you can get a Discord role and an early access build of the game. Please message me on Discord for it!
+                </p>
+                <div class="wallet-list">
+                    <div>
+                        <span class="wallet-label">Bitcoin (SegWit)</span>
+                        <code class="wallet-address">bc1qsgd8stcf6ruwd7xe7ep66gkuyxrm2t8jw89d07</code>
+                    </div>
+                    <div>
+                        <span class="wallet-label">Ethereum (ETH, BNB, Base, Optimism)</span>
+                        <code class="wallet-address">0x49Ea8F5bE7953D8F104E4CC4Ff97B2AD26ad0509</code>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </div>
+
+    <div class="section-title">Public Versions</div>
+    <div class="links-group">
+        <a href="https://noteverywitch.itch.io/course-to-venus?utm_medium=referral&utm_source=site&utm_campaign=play"
+           class="link-card">
+            <img src="itchio.svg" class="btn-icon" alt="">
+            Itch.io - Play online
+        </a>
+    </div>
+
+    <div class="section-title">Contact me</div>
+    <div class="links-group">
+        <a href="https://discord.gg/yExfFgVVbP"
+           class="link-card">
+            <img src="discord.svg" class="btn-icon" alt="">
+            Discord
+        </a>
+    </div>
+
+    <div class="section-title">Halp!</div>
+    <div class="links-group">
+        <a href="faq.html" class="link-card">
+            FAQ
+        </a>
+    </div>
+
+    <div class="soc-title">Follow me</div>
+    <div class="soc-row">
+        <a href="https://bsky.app/profile/noteverywitch.bsky.social"><img src="bluesky.svg" class="soc-icon" alt="Bluesky"></a>
+        <a href="https://instagram.com/neverywitch"><img src="instagram.svg" class="soc-icon" alt="Instagram"></a>
+        <a href="https://x.com/noteverywitch"><img src="x.svg" class="soc-icon" alt="Twitter"></a>
+        <a href="https://www.reddit.com/user/Decent-Election-3743"><img src="reddit.svg" class="soc-icon" alt="Reddit"></a>
+    </div>
+
+    <p class="disclaimer">
+        By clicking any link, you confirm that you are 18+ years of age<br>
+        All characters depicted are 18 or older
+    </p>
+</div>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-03QK18XC0D"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-03QK18XC0D');
+</script>
+
+<script>
+    function openCryptoDonate() {
+      if (window.location.hash !== '#crypto-donate') {
+        return;
+      }
+
+      const cryptoDonate = document.getElementById('crypto-donate');
+
+      if (!cryptoDonate) {
+        return;
+      }
+
+      cryptoDonate.open = true;
+      requestAnimationFrame(function() {
+        cryptoDonate.scrollIntoView({ block: 'start' });
+      });
+    }
+
+    window.addEventListener('hashchange', openCryptoDonate);
+
+    window.addEventListener('load', function() {
+      openCryptoDonate();
+
+      setTimeout(function() {
+        const url = new URL(window.location.href);
+        const params = url.searchParams;
+        let hasUtm = false;
+
+        Array.from(params.keys()).forEach(key => {
+          if (key.startsWith('utm_')) {
+            params.delete(key);
+            hasUtm = true;
+          }
+        });
+
+        if (hasUtm) {
+          const cleanUrl = url.pathname + (params.toString() ? '?' + params.toString() : '') + url.hash;
+          window.history.replaceState({}, document.title, cleanUrl);
+        }
+      }, 500);
+    });
+</script>
+</body>
+</html>

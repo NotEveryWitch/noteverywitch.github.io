@@ -1,0 +1,358 @@
+v0.7:
+
+    Highlights:
+        Halloween is here! The ship is decked out for the holiday until November 30! Even the main theme music has taken a spooky turn.
+    Relationship Level 5! You can now reach level 5 with the girls through their personal quests!
+        New Punishments! You can now punish not just Amy, but Jenny and Molly too.
+        Chess with Molly! A new event in the lounge.
+        Animations! Characters around the ship have come to life! They now breathe, blink, and move.
+        Space Visuals Overhaul! The view outside the windows has been completely revamped, with new space backgrounds in different color palettes, drifting and twinkling stars, updated comets, flybys, and hyperspace jumps.
+        Rain Overhaul! Rain now appears as droplets on the windows instead of particles, complete with streaks, fogging, and lightning flashes.
+
+    General – Girls:
+        Jenny: New punishment — cooking! The Captain can drop by the kitchen to help her... or get in her way.
+        Molly: New punishment — cleaning the ship in a maid outfit.
+        Amy: Spanking with Astra Lumis's magic wand is now a separate punishment.
+        Chess: You can now ask Molly to play a game of chess while she's watching TV in the lounge. If only the Captain knew the rules...
+        Jenny can now climb the ladder first while wearing her torn uniform (requires Relationship Level 5).
+        Added a no-panties option to Jenny and Molly's changing scenes in their cabins.
+        Improved the crew's daily routines.
+
+    General:
+        Wine! A new gift, available at the Trading Ring for 5 money.
+        The refrigerator can now be opened.
+        Tea time in the kitchen can now be started by clicking the kettle.
+        Reduced the price of the erotic movie from 40 to 30.
+
+    Star Duel:
+        Halloween Card Set! 15 new Halloween-themed cards.
+        Seal Rework: The Seal status now simply disables abilities and themes.
+        Added 12 FOIL cards featuring the heroines in revealing artwork.
+        Flower finally has animations! It now has idle animations and laughs when it wins an act or a match.
+
+    UI:
+        Pressing Esc or the Android Back button now exits nested dialogue menus.
+        The terminal on the bridge is now highlighted when a new room can be unlocked through a quest.
+        Moved the "Complete Mission" button on the map to the bottom-left corner so it no longer covers waypoints.
+        Added a warning on the save screen in the browser version that browser data may be cleared, resulting in lost saves.
+        Improved fonts and line wrapping for Chinese, Japanese, and Korean.
+
+    Performance:
+        Eliminated stuttering when effects appear for the first time, including comets, item highlights, tooltips, and animations.
+        Improved texture compression on mobile devices.
+
+    Fixes:
+        Fixed a crash caused by pressing Esc during loading.
+        Fixed an issue on Android 11 where system bars could overlap the game.
+        Connected gamepads no longer interfere with mouse clicks during waiting and peeping scenes.
+
+    Scene Editor:
+        Redesigned the interface, which now scales to fit different screen sizes.
+        Improved object placement precision and added the ability to undo object movements.
+
+    ...and much more!
+
+v0.6.3:
+
+    Fixes:
+        Fixed incorrect texture rendering on some mobile devices
+
+v0.6.2:
+
+    Fixes:
+        Items without sprites no longer display an error message when added to the inventory.
+
+v0.6.1:
+
+    Star Duel:
+        Clicking the close (X) button now asks for confirmation before exiting a duel.
+        Leaving the deck-building screen with unsaved changes will now trigger a warning that your changes will be lost.
+        The preparation screen now displays your collection progress—showing how many unique cards you've collected out of the total available.
+
+    Global:
+        Save files can now be exported and imported on Windows and Android (previously browser-only). This makes it easy to transfer your progress between devices—for example, from phone to PC.
+
+    Economy:
+    Nobody likes grinding! Prices have been lowered and rewards increased:
+        Star Duel booster packs at the Trading Ring now cost 50% less.
+        VHS tapes at the Trading Ring now cost 50% less.
+        Mission Money rewards have been doubled.
+        Loading a save from an older version will now grant the Captain 100 Money to make up for the lower earnings in previous versions.
+
+    Fixes:
+        Fixed a quest log crash when loading older saves that contained a now-removed quest.
+        Fixed vibration-related errors during Star Duel on Android devices without vibration permissions. The duel will now simply proceed without vibration.
+        Fixed a potential crash when targeting with a card in Star Duel.
+        Fixed a memory leak where entering Star Duel or the preparation screen left duplicate card artwork in memory. Over long sessions—especially on mobile—this could lead to crashes.
+        Moving between locations has been slightly optimized: the camera no longer unnecessarily recreates render buffers.
+        Scenario Editor (Windows): Deleting or renaming a scenario folder while the list is open no longer breaks the editor. The list now simply refreshes.
+
+
+v0.6:
+
+    General:
+        Added Star Duel—a full-fledged card mini-game integrated directly into the story.
+        The girls no longer follow fixed schedules. Each now has her own needs—Energy, Hunger, Hygiene, and Fun—as well as Mood, and decides for herself where to go and what to do.
+        The girls now actually walk between rooms instead of teleporting, so you can run into them along the way.
+        Crew Morale has been replaced with Well-being, reflecting how comfortable the girls are living aboard the ship.
+        Ship hull damage now carries over between missions, and Amy repairs it during her working hours.
+        Added 41 card illustrations and around 30 new visuals, including character art, items, and Photo Cards.
+
+    Star Duel:
+        A card game played strictly by Alliance rules—which means strip rules apply.
+        You can play against Amy, Jenny, and even Flower (who unfortunately doesn't strip), as well as the Pirate, the Alliance Commander, and the Party Girl from the Indestructible cruise liner. Molly refuses to play... but ask her anyway.
+        The mini-game has its own music track and sound effects.
+
+    General – Girls:
+        The girls now decide where to go based on what they need most: if they're hungry, they'll head to the Kitchen; if they need a shower, they'll go to the Bathroom; if they're bored, they'll watch TV or use the arcade machine in the Lounge.
+        After showering, girls now walk back to their cabins to get dressed instead of instantly appearing there. That means you might run into one wearing nothing but a towel along the way—including on the ladder.
+        Running into a towel-clad Amy on the ladder can now trigger a new scene involving a fall, Photo Cards, and another penalty point.
+        You can now catch Amy changing in her cabin. She's not happy about the broken door—and she's even less happy with the Captain.
+        During Jenny's ladder encounter, you can now choose whether or not to tear her uniform.
+        Missions wear everyone out. Sleep, food, showers, and downtime help them recover.
+        Molly now gets proper days off. If the pilot is resting, the ship isn't going anywhere.
+
+    Missions:
+        Law-abiding pirates are now roaming space! You can even buy fake papers from them to clear your Wanted status.
+        Added and updated several encounters, including the Alliance Patrol Ship, the Indestructible cruise liner, and the Alliance Military Base. You can now return a stolen item there to clear your Wanted status.
+
+    UI & UX:
+        Added a Well-being section to each girl's Diary page, with an expandable panel showing Energy, Hunger, Hygiene, Fun, and Mood.
+        The Mission screen now shows Crew Well-being and Hull Integrity instead of Morale.
+        Added horizontal navigation arrows to the Inventory, so there's room for the ever-growing pile of stuff.
+        On mobile devices, frame rate and resolution now adjust automatically based on the device's thermal state.
+        Made a number of smaller performance improvements: fewer unnecessary UI redraws, HDR is now enabled only in scenes that actually need it, and texture settings have been optimized.
+
+    Fixes:
+        Fixed an issue that could corrupt saves made in the middle of a scene.
+        Fixed the bet with Molly during the horror movie: the scene can now be triggered even if the Captain has no money, and the bet will always trigger after choosing "Wait" once.
+
+    ...and much more!
+
+v0.5.4:
+
+    Fixes:
+        Fixed incorrect texture rendering on some mobile devices
+
+v0.5.3:
+
+    Fixes:
+        Fixed an animation error in the night scene with the girl from the cryo-pod.
+        Fixed a bug where Molly would sometimes run out of the shower the moment the alarm went off.
+        Fixed a bug where the "Relax in the lounge" quest could get stuck in older saves.
+        Fixed a crash when closing the shop. Esc also no longer stops responding after certain windows are closed.
+        Fixed a crash when pressing interface buttons such as skip time or inventory at a moment when nothing was assigned to them.
+        Fixed a crash when starting a custom scenario.
+
+v0.5.2:
+
+    Fixes:
+        Fixed some rendering errors.
+
+v0.5.1:
+
+    Fixes:
+        Fixed issues related to loading old saves.
+
+v0.5:
+
+    Global:
+        Added a new Special Thanks section to the game. This game only exists thanks to your support, so I’ve added the names of supporters who have been with me for a long time. Thank you!
+        You can now unlock a new Lounge on the ship. Let the Captain relax for once!
+        Added a new Camera item. It lets you fill a folder on the Captain’s computer with photos of memorable moments. I plan to expand this feature in the future so the camera may eventually capture a little more than the Captain originally got to see. You can already start building your photo collection with it!
+        Solar Witch has released a new album with 11 tracks! You can listen to it in-game and on the Captain’s computer. Music has also been added to many locations and events.
+        Added a travel map for moving between unlocked locations. New coordinates can be discovered during missions. This feature will be expanded further in future updates.
+        Added Turkish localization.
+        In the browser version, save files can now be downloaded and uploaded again later.
+        Added around 70 new images, not counting UI elements or edits to existing artwork.
+
+    General – Girls:
+        Each girl now has her own interactive scene for watching TV together.
+        Expanded and refined the girls’ reactions to compliments, gifts, punishments, and several existing interactions.
+        When a girl is eating, you can now sit down and join her individually, instead of only being able to join Jenny or everyone at once.
+
+    Missions:
+        Added new story missions, marked with a star, which unlock the Lounge and a new trade route.
+        Shops now have a proper interface. Their inventories and prices have also been reworked.
+        Many items, including the girls’ panties, Jenny’s uniform, and more, now have their own illustrations.
+
+    UI:
+        Updated the look and animations of the main game windows, choices, journal, quest log, inventory, menus, and save/load screens.
+        Improved UI scaling and safe-area handling on mobile devices.
+        Added tooltips to the girl info screen for relationship level, mood, panties, demerit points, and favors.
+
+    Fixes:
+        If the Captain is supposed to receive an item as a mission reward but already owns it, the dialogue now explains why he doesn’t get another copy.
+        You can now continue moving between locations while holding Ctrl.
+        Fixed a bug that could cause Molly’s mood state to disappear and leave her permanently in a bad mood.
+        Fixed the ventilation unlock logic and restored the correct quest progress when loading older saves.
+        Fixed returning to dialogue after hugs and certain story dialogue. Conversations should no longer end unexpectedly.
+        Fixed various issues with long text, fonts, dialogue history, and UI elements at different screen resolutions.
+        Fixed many typos, punctuation errors, and minor scene display issues.
+
+    And much more!
+
+v0.4:
+    WARNING: Loading an old save file will reset your relationship status with the girls due to the rework.
+
+    Story:
+        The Captain's got a plan... and so, the story continues
+
+    Molly:
+        Molly will now leave the shower if the ship's alarm is blaring.
+
+    Jenny:
+        The Captain can now accidentally tear Jenny's uniform, changing her overall look and two of her animations.
+        Added a sprite for Jenny working at the computer in nothing but a towel.
+        Added sprites for Jenny in a towel that appear when you wake up in the Medbay.
+
+    Amy:
+        Added an animated punishment scene with Amy. You can finally spank her! The scene has several different variations. That damn zipper has come undone again!
+        Amy will now leave the shower if the ship's alarm is blaring.
+        Amy sometimes shows off her panties, and now you can touch them too.
+
+    General – Girls:
+         In total, around 50 new art sprites have been added to the game in this update.
+        The relationship system has been significantly reworked. Many events have been updated, and numerous new reactions have been added depending on the girls' moods, such as when they are angry or aroused.
+        Reworked the shop at the station. Buying panties is now much more straightforward, and you can also purchase a uniform for Jenny or even watch a scene with Amy. The shop still does not have a dedicated interface, but I'm working on it!
+        The Captain can now apologize to the girls after upsetting them.
+        Expanded some of the photo sets on the Captain's computer with additional images.
+
+    UI:
+        Added an option to hide the interface during dialogue, so you can clearly see the art!
+        Added an option to return to the main menu during dialogue.
+        Added an option to view the dialogue history during conversations.
+
+
+v0.3.5:
+
+   Custom Scenarios (Windows Only):
+        An experimental feature: Early alpha version of the custom scenario editor.
+        I've decided to share a feature that has been on my mind for a long time: a tool for creating custom scenarios. Please keep in mind that this is a very early alpha. There are definitely bugs, the interface is still rather makeshift, and some things may not work properly on the first try. Your feedback is extremely important to me, as it will help me understand whether this idea is worth developing further.
+        Added a scenario created by our friends at Charmerscove! Please support them by wishlisting their game on Steam.
+        Added a short mini-scenario from me.
+
+
+v0.3.2:
+
+    Fixes:
+        Fixed an issue where Jenny's dialogue near the ladder (while wearing a towel) was occasionally attributed to the Captain.
+        Fixed a bug where requesting the salt at the dinner table caused a duplicate Jenny to appear.
+        Fixed a bug during the panties-for-fuel trade where Amy claimed she forgot them, but the scene continued with incorrect dialogue.
+        Fixed an issue during the same event where peeping on Amy resulted in a white screen.
+        Fixed a bug where quickly switching between scenes could cause choice options from another scene to be displayed.
+
+v0.3.1:
+
+    Fixes:
+        Fixed a bug where the cryo-pod girl's quest would freeze up and break if you loaded an old save.
+        Fixed a glitch with extra dialogue choices when handing over a gift from your inventory.
+        Fixed a bug where a girl would get stuck on your screen after closing the inventory.
+        Fixed an issue where Amy would butt into the table chat before she even joined the crew.
+        Tweaked the UI layout so it looks right on tablets.
+        Fixed a bug where Jenny wouldn't show up sometimes if you woke up in the Medbay.
+        Fixed lighting artifacts and banding issues.
+
+v0.3:
+
+    This patch features over 50 new images, not counting backgrounds, prop items, and UI elements.
+
+    Jenny:
+        She can now come out of the shower wearing only a towel.
+
+    Amy:
+        Amy has now started falling off ladders. What a klutz.
+        She can also show off her favorite panties now.
+
+    General – Girls:
+        You can now sit down and have a civilized meal with the crew. Even under the table.
+        Jenny and Molly will now sometimes JUST wash up in the bathroom.
+
+    Missions:
+        Most missions now feature images instead of just text.
+
+    Ship and everything else:
+        Added a photo card collecting mechanic. The Captain keeps all the photos on his personal computer.
+        Added the inventory UI. It is now much easier to navigate through your collected items.
+        Added the ship management UI. For now, you can use it to check out existing rooms and chat with the ship's AI. In the future, this interface will be used for ship upgrades and unlocking new rooms.
+        Added a tutorial mission for maps.
+        Electrical lighting has been installed throughout the ship (well, except for Molly’s room—she was against it).
+        The flower now has an interaction screen. After all, everyone was waiting for this!
+        And much more!
+
+v0.2.2:
+
+    Fixes:
+        Fixed a bug where the ventilation quest could break if you got the key too early.
+
+v0.2.1:
+
+    Fixes:
+        Fixed a critical issue (the "Turkish I" bug) where game objects became invisible or failed to activate if the OS language (Windows / Android) was set to Turkish, Azerbaijani, or Kazakh. Thanks Rendro!
+        Fixed text casing and font rendering issues for German (ß conversion), Greek, and French.
+        The game should now run flawlessly regardless of your operating system's regional and culture settings.
+        Fixed a bug where the shower door would remain closed after Jenny left, but objects could still be clicked.
+
+v0.2:
+
+    A note regarding this version:
+        In 0.2, I spent a lot of time on animations (Amy's idle, hugs with three characters, the scene with the girl from the cryo-pod),so there isn't as much content as I originally planned. In the next patch, I will likely focus on static CGs
+        (otherwise, there ends up being too much text without visuals).
+        I also want to expand and balance missions in the future to make flights more engaging.
+        Additionally, I don't like the current way relationship levels work and would like to make it clearer in the future.
+
+        I will be very happy to receive feedback, advice, comments, and ideas!
+
+    Story:
+        The storyline with the girl from the cryo-pod has been continued, including one animated NSFW scene and several NSFW images.
+
+    Jenny:
+        Jenny can tell your fortune for tomorrow.
+        Added another, strange way to get into the Med Bay.
+        I re-recorded Jenny's old moans because I didn't like them (didn't like the sound quality).
+
+    Amy:
+        Amy now has a schedule; she moves around the ship and has her own cabin.
+        Amy never washes because she hates water. But when it does, you can peek at her in the bathroom.
+        You can grab Amy by the butt on the stairs (doesn't cause a fall yet).
+        It turns out the Captain and Amy are fans of the same popular TV series! Who would have thought?
+
+    General – Girls:
+        Added the ability to hug all the girls.
+        All characters now have an animation when hugging.
+        Voiced moans for Molly and Amy during interactions, 46 new moans (I voice everyone alone, so they might sound similar for different girls, lol. But I tried!).
+        "Favor" system. The girls can owe the Captain a service...
+        You can now give gifts to the girls (and trade with them).
+        The Captain now has a superpower to know how many pairs of panties the girls have left and if they are wearing them right now.
+        Events (text and visuals) now change depending on whether a girl is wearing panties (where applicable).
+
+    Missions:
+        Missions are now more varied, with more choices that actually affect things.
+        Added various new random encounters in missions (unfortunately text-only for now).
+        New mission start screen. Several missions are now available to choose from, but they currently differ only in rewards.
+
+    Ship and everything else:
+        We finally got ventilation on the ship.
+        Space has become more... spacey!
+        Added various visual effects (receiving an item, ship shaking, etc.).
+        Time-of-day changes are now shown visually (don't even ask).
+        A great conversationalist, the Flower, now appears in the Cargo Bay if found in missions.
+        A dialogue history screen has been added.
+        Many other small improvements.
+        Various texts improved.
+        The damn phone is constantly ringing!
+        Many images have been improved and now look better.
+        Added art for some items (inventory is not yet implemented, but they are visible upon receipt).
+
+        The number of lines of text in the game increased by more than 1000 lines (from 1644 to 2736).
+        I honestly don't know how it ended up being so much! I try very hard not to bloat the text component and not to write unnecessary dialogue.
+
+v0.1.1:
+
+    Fixes:
+        Fixed a bug where the game would hang in missions after the Captain's phrase "Molly, any ideas?".
+        Fixed a bug where mood would disappear and girls would stay angry at you permanently.
+
+v0.1:
+
+    Initial demo
